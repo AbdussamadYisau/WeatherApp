@@ -48,7 +48,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-[20px] p-24">
       <ToastContainer />
-      <div className="entryForm lg:w-[900px]">
+      <div className="entryForm w-[400px] lg:w-[900px]">
         <h1 className="text-2xl text-center ">
           Want to find out what the weather is at a place?
         </h1>
@@ -98,7 +98,7 @@ export default function Home() {
       )}
 
       {weatherData && !weatherData.message && (
-        <div className="mt-[60px] entryForm lg:w-[1200px]">
+        <div className="mt-[60px] entryForm w-[400px] lg:w-[1200px]">
           <h1 className="text-2xl text-center ">{weatherData?.name}</h1>
           <h2 className="text-xl text-center ">{weatherData?.main?.temp}°C</h2>
           <h3 className="text-lg text-center ">
@@ -110,7 +110,7 @@ export default function Home() {
             <p>H: {` ${weatherData?.main?.temp_max}°C `}</p>
           </div>
 
-          <div className="mt-[8px] grid gap-4 grid-cols-3 grid-rows-2">
+          <div className="mt-[8px] grid gap-4 grid-cols-1 grid-rows-1 lg:grid-cols-3 lg:grid-rows-2">
             <div className="gridElement">
               <p className="mt-[12px] mb-[20px]">Wind</p>
               <GaugeChart
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="gridElement gridElementInvisible"></div>
+            <div className="hidden lg:block lg:gridElement lg:gridElementInvisible"></div>
 
             <div className="gridElement">
               <p className="mt-[12px] mb-[60px]">Feels Like</p>
