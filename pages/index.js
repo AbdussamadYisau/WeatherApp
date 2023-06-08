@@ -46,10 +46,10 @@ export default function Home() {
   }, [error]);
 
   return (
-    <main className="flex min-h-screen flex-col items-center gap-[20px] p-24">
+    <main className="box-border flex min-h-screen flex-col items-center gap-[20px] p-24">
       <ToastContainer />
-      <div className="entryForm w-[400px] lg:w-[900px]">
-        <h1 className="text-2xl text-center ">
+      <div className="entryForm w-[300px] lg:w-[900px]">
+        <h1 className="text-sm lg:text-2xl text-center ">
           Want to find out what the weather is at a place?
         </h1>
 
